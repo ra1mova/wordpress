@@ -1,28 +1,36 @@
 pipeline {
-    agent any
-    
+    agent lamp-slave
+
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/ra1mova/wordpress.git'
+                withCredentials([usernamePassword(credentialsId: 'github', usernameVariable: 'GIT_USERNAME', passwordVariable: 'GIT_PASSWORD')]) {
+                    git url: 'https://github.com/ra1mova/wordpress.git', branch: 'main', credentialsId: 'github'
+                }
             }
         }
-        
-        stage('Build') {
+
+        stage('Install WordPress') {
             steps {
-                sh 'docker-compose build'
+                sh 'curl -O https://wordpress.org/latest.tar.gz'
+                sh 'tar -zxvf latest.tar.gz'
+                sh 'mv wordpress/* /var/www/html'
+                sh 'rm -rf wordpress latest.tar.gz'
+                sh 'chown -R www-data:www-data /var/www/html'
             }
         }
-        
-        stage('Test') {
+
+        stage('Install Plugins and Themes') {
             steps {
-                sh 'docker-compose run --rm -e WP_ENV=testing wordpress ./vendor/bin/phpunit'
+                // Install any required plugins and themes here
             }
         }
-        
-        stage('Deploy') {
+
+        stage('Build and Deploy') {
             steps {
-                sh 'docker-compose up -d'
+                sh 'wp core update --path=/var/www/html --allow-root'
+                sh 'wp plugin update --all --path=/var/www/html --allow-root'
+                sh 'wp theme update --all --path=/var/www/html --allow-root'
             }
         }
     }
