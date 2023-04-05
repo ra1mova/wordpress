@@ -20,12 +20,6 @@ pipeline {
             }
         }
 
-        stage('Install Plugins and Themes') {
-            steps {
-                // Install any required plugins and themes here
-            }
-        }
-
         stage('Build and Deploy') {
             steps {
                 sh 'wp core update --path=/var/www/html --allow-root'
