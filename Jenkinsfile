@@ -12,6 +12,7 @@ pipeline {
 
         stage('Install WordPress') {
             steps {
+                sh 'git clone https://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@github.com/ra1mova/wordpress.git'
                 sh 'sudo mv wordpress/* /var/www/html'
                 sh 'sudo chown -R www-data:www-data /var/www/html'
             }
