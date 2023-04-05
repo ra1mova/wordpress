@@ -19,13 +19,5 @@ pipeline {
                 sh 'sudo chown -R www-data:www-data /var/www/html'
             }
         }
-
-        stage('Build and Deploy') {
-            steps {
-                sh 'wp core update --path=/var/www/html --allow-root'
-                sh 'wp plugin update --all --path=/var/www/html --allow-root'
-                sh 'wp theme update --all --path=/var/www/html --allow-root'
-            }
-        }
     }
 }
