@@ -12,10 +12,7 @@ pipeline {
 
         stage('Install WordPress') {
             steps {
-                sh 'curl -O https://wordpress.org/latest.tar.gz'
-                sh 'tar -zxvf latest.tar.gz'
                 sh 'sudo mv wordpress/* /var/www/html'
-                sh 'sudo rm -rf wordpress latest.tar.gz'
                 sh 'sudo chown -R www-data:www-data /var/www/html'
             }
         }
