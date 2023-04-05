@@ -1,5 +1,5 @@
 pipeline {
-    agent {label "lamp-slave"}
+    agent {label "qwerty"}
 
     stages {
         stage('Checkout') {
