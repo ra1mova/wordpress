@@ -14,9 +14,9 @@ pipeline {
             steps {
                 sh 'curl -O https://wordpress.org/latest.tar.gz'
                 sh 'tar -zxvf latest.tar.gz'
-                sh 'mv wordpress/* /var/www/html'
-                sh 'rm -rf wordpress latest.tar.gz'
-                sh 'chown -R www-data:www-data /var/www/html'
+                sh 'sudo mv wordpress/* /var/www/html'
+                sh 'sudo rm -rf wordpress latest.tar.gz'
+                sh 'sudo chown -R www-data:www-data /var/www/html'
             }
         }
 
