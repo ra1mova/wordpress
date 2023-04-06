@@ -16,6 +16,7 @@ pipeline {
                 sh 'git checkout .'
                 sh 'sudo mv * /var/www/html'
                 sh 'sudo chown -R www-data:www-data /var/www/html'
+                
             }
         }
     }
