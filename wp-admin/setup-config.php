@@ -163,7 +163,7 @@ switch ( $step ) {
 		_e( 'Before getting started' );
 		?>
 </h1>
-<p><?php _e( 'WordPress Roza. Before getting started, you will need to know the following items.' ); ?></p>
+<p><?php _e( 'We did it!!! WordPress. Before getting started, you will need to know the following items.' ); ?></p>
 <ol>
 	<li><?php _e( 'Database name' ); ?></li>
 	<li><?php _e( 'Database username' ); ?></li>
