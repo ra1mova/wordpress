@@ -16,6 +16,7 @@ pipeline {
                 sh 'sudo rm -rf index.html /var/www/html/index.html'
                 sh 'sudo mv * /var/www/html'
                 sh 'sudo chown -R www-data:www-data /var/www/html'
+                
             }
         }
     }
