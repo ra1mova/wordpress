@@ -12,7 +12,7 @@ pipeline {
 
         stage('Install WordPress') {
             steps {
-                sh 'sudo rm rf  /var/www/html/*'
+                sh 'sudo rm -rf  /var/www/html/*'
                 sh 'git checkout .'
                 sh 'sudo rm -rf index.html /var/www/html/index.html'
                 sh 'sudo mv * /var/www/html'
