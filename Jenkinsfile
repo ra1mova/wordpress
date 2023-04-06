@@ -1,5 +1,5 @@
 pipeline {
-    agent {label "lamp"}
+    agent {label "ubuntu"}
 
     stages {
         stage('Checkout') {
