@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'github', usernameVariable: 'GIT_USERNAME', passwordVariable: 'GIT_PASSWORD')]) {
-                    git url: 'https://github.com/ra1mova/wordpress.git', branch: 'main', credentialsId: 'github'
+                withCredentials([usernamePassword(credentialsId: 'qwerty', usernameVariable: 'GIT_USERNAME', passwordVariable: 'GIT_PASSWORD')]) {
+                    git url: 'https://github.com/ra1mova/wordpress.git', branch: 'main', credentialsId: 'qwerty'
                 }
             }
         }
