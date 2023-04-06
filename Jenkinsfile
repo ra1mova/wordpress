@@ -1,5 +1,5 @@
 pipeline {
-    agent {label "ubuntu"}
+    agent {label "lamp-server"}
 
     stages {
         stage('Checkout') {
