@@ -4,7 +4,7 @@
  * wp-blog-header.php which does and tells WordPress to load th
 
 /**
- * Tells WordPress t
+ * Tells WorbmndPress t
  */
 define( 'WP_USE_THEMES', true );
 
