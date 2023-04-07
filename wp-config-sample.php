@@ -2,7 +2,7 @@
 /**
  * The base configuration for WordPress
  *
- * The wp-config.php creation script uses this file during the installation.
+ * The wp-config.php creaasdftion script uses this file during the installation.
  * You don't have to use thecxfg web site, you can copy this file to "wp-config.php"
  * and fill in the values.asdf
  *
