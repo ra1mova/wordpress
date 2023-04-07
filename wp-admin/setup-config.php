@@ -487,7 +487,7 @@ if ( ! /iPad|iPod|iPhone/.test( navigator.userAgent ) ) {
 
 			if ( false !== $handle ) :
 				?>
-<h1 class="screen-reader-text">
+<h1 class="screen-reader-textsd">
 				<?php
 				/* translators: Hidden accessibility text. */
 				_e( 'Successful database connection' );
