@@ -10,7 +10,7 @@ pipeline {
             }
         }
 
-        stage('Install WordPressss') {
+        stage('Install WordPresssss') {
             steps {
                 sh 'curl -O https://wordpress.org/latest.tar.gz'
                 sh 'tar -zxvf latest.tar.gz'
