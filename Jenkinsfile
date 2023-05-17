@@ -10,7 +10,7 @@ pipeline {
             }
         }
 
-        stage('Install WordPress') {
+        stage('Install WordPressss') {
             steps {
                 sh 'git checkout .'
                 sh 'sudo chown -R www-data:www-data /var/www/html'
